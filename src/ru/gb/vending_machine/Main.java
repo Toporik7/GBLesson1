@@ -1,19 +1,26 @@
 package ru.gb.vending_machine;
 
-import ru.gb.vending_machine.products.Bottle;
-import ru.gb.vending_machine.products.Product;
-import ru.gb.vending_machine.vending.VendingMachine;
+import java.time.LocalDate;
 
 public class Main {
     public static void main(String[] args) {
-        VendingMachine vendingMachine = new VendingMachine(123);
+        FamilyTree tree = new FamilyTree();
 
-        Product product1 = new Bottle("coca-cola", 150, 1.5);
-        Product product2 = new Product("milko", 100);
+        Human gena = new Human("Геннадий", Gender.Male, LocalDate.of(1977, 11, 27));
+        Human luda = new Human("Людмила", Gender.Female, LocalDate.of(1975, 8,18));
 
-        vendingMachine.addProduct(product1);
-        vendingMachine.addProduct(product2);
+        tree.add(gena);
+        tree.add(luda);
+        tree.setWedding(gena.getId(), luda.getId());
 
-        System.out.println(vendingMachine.getProductsInfo());
+        Human masha = new Human("Мария", Gender.Female, LocalDate.of(1997, 6, 28),
+                gena, luda);
+        Human danil = new Human("Даниил", Gender.Male, LocalDate.of(2000, 10, 1),
+                gena, luda);
+
+        tree.add(masha);
+        tree.add(danil);
+
+        System.out.println(tree);
     }
 }
