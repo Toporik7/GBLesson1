@@ -1,4 +1,9 @@
-package ru.gb.vending_machine;
+package ru.gb.family_tree;
+
+import ru.gb.family_tree.family_tree.FamilyTree;
+import ru.gb.family_tree.human.Gender;
+import ru.gb.family_tree.human.Human;
+import ru.gb.family_tree.save.FileHandler;
 
 import java.time.LocalDate;
 
@@ -22,7 +27,7 @@ public class Main {
         writable.save(tree, filePath);
     }
 
-    private static  FamilyTree testTree(){
+    private static FamilyTree testTree(){
         FamilyTree tree = new FamilyTree();
 
         Human gena = new Human("Геннадий", Gender.Male, LocalDate.of(1977, 11, 27));

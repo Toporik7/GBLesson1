@@ -1,9 +1,11 @@
-package ru.gb.vending_machine;
+package ru.gb.family_tree.save;
 
+
+import ru.gb.family_tree.Writable;
 
 import java.io.*;
 
-public class FileHandler implements Writable{
+public class FileHandler implements Writable {
 
     @Override
     public boolean save(Serializable serializable, String filePath) {

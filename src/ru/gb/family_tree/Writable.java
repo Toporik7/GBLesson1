@@ -1,4 +1,4 @@
-package ru.gb.vending_machine;
+package ru.gb.family_tree;
 
 import java.io.Serializable;
 
