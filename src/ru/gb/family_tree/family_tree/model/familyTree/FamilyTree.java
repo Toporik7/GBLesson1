@@ -1,4 +1,4 @@
-package ru.gb.family_tree.family_tree;
+package ru.gb.family_tree.family_tree.model.familyTree;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -141,4 +141,5 @@ public class FamilyTree<E extends TreeNode<E>> implements Serializable, Iterable
     public Iterator<E> iterator(){
         return new FamilyTreeIterator<>(humanList);
     }
+
 }

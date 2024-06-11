@@ -1,9 +1,8 @@
-package ru.gb.family_tree.family_tree;
+package ru.gb.family_tree.family_tree.model.familyTree;
 
-import ru.gb.family_tree.human.Human;
 
-import java.awt.*;
 import java.util.Iterator;
+import java.util.List;
 
 public class FamilyTreeIterator<T extends TreeNode<T>> implements Iterator<T> {
     private List<T> list;
